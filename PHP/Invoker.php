@@ -76,6 +76,8 @@ class PHP_Invoker
      */
     public function invoke($callable, array $arguments, $timeout)
     {
+	$timeout = 0;
+	
         if (!is_callable($callable)) {
             throw new InvalidArgumentException;
         }
